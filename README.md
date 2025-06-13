@@ -11,10 +11,10 @@
 For this assignment 3 we are going to create a bank automated teller machine simulator
 
 - To simulate a transaction of PIXELL RIVER FINANCIAL on the system.
-- To create a Deposit, Withdraw and Quit from the system.
+- To easily manage bank account transactions.
+- To Create a Deposit, Withdraw and Quit from the system.
 - When pressing something invalid from the system should say "INVALID SELECTION"
 - Updates the current balance every time when Deposit, Withdraw etc.
-- To easily manage bank account transactions.
 - When pressed quit the system should output and tell the user the program will exit.
 
 ## Author
