@@ -2,7 +2,9 @@
 
 ## Contents
 
-
+- [Description](#description)
+- [Author](#author)
+- [Assignment Instructions](#assignment-instructions)
 
 ## Description
 
@@ -48,10 +50,12 @@ Define a collection to store the following values:
 These values represent the menu options of Deposit, Withdraw and Quit.
 
 Customer Initial Balance
-Since the program is a simulator, the customer's initial bank balance will be a randomly generated value between -1,000 and 10,000. Setting the customer's initial bank balance must only happen once per program execution.
+Since the program is a simulator, the customer's initial bank balance will be a randomly generated value between -1,000 and 10,000. 
+Setting the customer's initial bank balance must only happen once per program execution.
 
 Selection Menu
-The ATM Simulator starts by displaying the selection menu. The ATM display has a maximum width of 40 characters.
+The ATM Simulator starts by displaying the selection menu. 
+The ATM display has a maximum width of 40 characters.
 
 Format:
 
@@ -94,7 +98,8 @@ After the selection menu is displayed to the customer, the customer is prompted 
 Enter your selection: {selection}
 
 Note!
-The output will not include "{selection}". It is only part of the format to show you where a menu selection will be entered.
+The output will not include "{selection}". 
+It is only part of the format to show you where a menu selection will be entered.
 ```
 
 The prompt will be printed on the very next line following the selection menu. Do not include any blank lines after the menu and before the selection prompt:
