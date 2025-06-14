@@ -42,7 +42,7 @@ Returns:
 ****************************************
 """
 
-
+# While loop for user option if q is not pressed
 while user_options != 'Q':
     # Clear the screen
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -59,10 +59,17 @@ while user_options != 'Q':
       f"\n{text_withdraw}"
       f"\n{text_quit}"
       f"\n{max_width}")
-    
+    """
+    while user_option does not equal to Q then print  the required prompt 
+    for the bank such as boarder, balance, deposit, withdraw, quit.
+    """
+
+
+
+    # user options regarding the menu options selection
     user_options = input("Enter your selection: ").upper()
 
-# .values is the value inside the key(d,w,q)
+    # .values is the value inside the key(d,w,q)
     if user_options not in menu_options.values():
         print(f"{max_width}"
               f"\n{text_invalid}"
@@ -71,7 +78,7 @@ while user_options != 'Q':
         # Pause the script for the specified number of seconds
         sleep(2)
 
-# when user presses D transaction amount will be added
+    # when user presses D transaction amount will be added
 
     elif user_options == 'D':
         transaction = float(input("Enter your transaction amount: "))
@@ -83,7 +90,7 @@ while user_options != 'Q':
         # Pause the script for the specified number of seconds
         sleep(3)
 
-# when user presses w check first if user transaction > balance
+    # when user presses w check first if user transaction > balance
     elif user_options == 'W':
         transaction = float(input("Enter your transaction amount: "))
         if transaction > balance:
@@ -93,7 +100,7 @@ while user_options != 'Q':
             # Pause the script for the specified number of seconds
             sleep(3)
 
-# if balance is sufficient subtract transaction to balance.
+        # else balance is sufficient subtract transaction to balance.
 
         else:
             balance -= transaction
