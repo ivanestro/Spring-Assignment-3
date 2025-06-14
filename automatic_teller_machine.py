@@ -43,47 +43,66 @@ Returns:
 """
 
 
-text_balance = f"Your Current balance is: ${balance:.2f}".center(40)
-text_deposit = "Deposit: D".center(40)
-text_widthdraw = "Withdraw: W".center(40)
-text_quit = "Quit: Q".center(40)
+while user_options != 'Q':
+    # Clear the screen
+    os.system('cls' if os.name == 'nt' else 'clear')
+    text_balance = f"Your Current balance is: ${balance:.2f}".center(40)
+    text_deposit = "Deposit: D".center(40)
+    text_withdraw = "Withdraw: W".center(40)
+    text_quit = "Quit: Q".center(40)
 
-print(f"{max_width} \n"
+    print(f"{max_width} \n"
       f"{text_pixell_river_financial} \n"
       f"{text_atm_simulator}\n"
       f"\n{text_balance}"
       f"\n{text_deposit}"
-      f"\n{text_widthdraw}"
+      f"\n{text_withdraw}"
       f"\n{text_quit}"
       f"\n{max_width}")
-
-user_options = input("Enter your selection: ").upper()
+    
+    user_options = input("Enter your selection: ").upper()
 
 # .values is the value inside the key(d,w,q)
-if user_options not in menu_options.values():
-    print(f"{max_width}"
-          f"\n{text_invalid}"
-          f"\n{max_width}")
+    if user_options not in menu_options.values():
+        print(f"{max_width}"
+              f"\n{text_invalid}"
+              f"\n{max_width}")
+        
+        # Pause the script for the specified number of seconds
+        sleep(2)
 
 # when user presses D transaction amount will be added
-elif user_options == 'D':
-    transaction = float(input("Enter your transaction amount: "))
-    balance += transaction
-    print(f"{max_width}"
-          f"\nYour current balance is: {balance:.2f}"
-          f"\n{max_width}")
+
+    elif user_options == 'D':
+        transaction = float(input("Enter your transaction amount: "))
+        balance += transaction
+        print(f"\n{max_width}"
+              f"\nYour current balance is: {balance:.2f}"
+              f"\n{max_width}")
+        
+        # Pause the script for the specified number of seconds
+        sleep(3)
 
 # when user presses w check first if user transaction > balance
-elif user_options == 'W':
-    transaction = float(input("Enter your transaction amount: "))
-    if transaction > balance:
-        print(f"{max_width}"
-              f"\n{text_insufficient}"
-              f"\n{max_width}")
- 
+    elif user_options == 'W':
+        transaction = float(input("Enter your transaction amount: "))
+        if transaction > balance:
+            print(f"{max_width}"
+                  f"\n{text_insufficient}"
+                  f"\n{max_width}")
+            # Pause the script for the specified number of seconds
+            sleep(3)
+
 # if balance is sufficient subtract transaction to balance.
-    else:
-        balance -= transaction
-        print(f"{max_width}"
-          f"\nYour current balance is: {balance:.2f}"
-          f"\n{max_width}")
+
+        else:
+            balance -= transaction
+            print(f"\n{max_width}"
+                  f"\nYour current balance is: {balance:.2f}"
+                  f"\n{max_width}")
+            
+            # Pause the script for the specified number of seconds
+            sleep(3)
+os.system('cls' if os.name == 'nt' else 'clear')
+
+print("Program is Shutting down ")
