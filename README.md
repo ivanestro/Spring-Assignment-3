@@ -1,5 +1,9 @@
 # Assignment 3
 
+## Author
+
+Ivan Estropigan
+
 ## Contents
 
 - [Description](#description)
@@ -23,6 +27,8 @@
 
 For this assignment 3 we are going to create a bank automated teller machine simulator
 
+### ATM Simulator
+
 - To simulate a transaction of PIXELL RIVER FINANCIAL on the system.
 - To easily manage bank account transactions.
 - To Create a Deposit, Withdraw and Quit from the system.
@@ -30,13 +36,18 @@ For this assignment 3 we are going to create a bank automated teller machine sim
 - Updates the current balance every time when Deposit, Withdraw etc.
 - When pressed quit the system should output and tell the user the program will exit.
 
-## Author
-
-Ivan Estropigan
+### Interest Update
 
 ## Assignment Instructions
 
 ## ATM Simulator Requirements
+
+ATM Simulator User Story
+As a Pixell River Financial customer,
+
+I want to use a simulated ATM for deposit and withdraw transactions,
+
+So that I can easily manage my bank account transactions.
 
 ## [1] Update the README File
 
@@ -285,7 +296,7 @@ If you make any changes during the source code review, ensure you save and commi
 
 ## Interest Update Requirements
 
-Interest Update User Story
+Interest Update User Story:
 
 ```cs
 As the VP Client Services,
