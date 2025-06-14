@@ -7,7 +7,6 @@ Ivan Estropigan
 ## Contents
 
 - [Description](#description)
-- [Author](#author)
 - [Assignment Instructions](#assignment-instructions)
 - [ATM Simulator Requirements](#atm-simulator-requirements)
 - [Update README File](#1-update-the-readme-file)
@@ -27,7 +26,7 @@ Ivan Estropigan
 
 For this assignment 3 we are going to create a bank automated teller machine simulator
 
-### ATM Simulator
+### ATM Simulator.py
 
 - To simulate a transaction of PIXELL RIVER FINANCIAL on the system.
 - To easily manage bank account transactions.
@@ -36,7 +35,11 @@ For this assignment 3 we are going to create a bank automated teller machine sim
 - Updates the current balance every time when Deposit, Withdraw etc.
 - When pressed quit the system should output and tell the user the program will exit.
 
-### Interest Update
+### Interest Update.py
+
+- To apply interest based on balance accounts
+- To apply interest based on how much they hold $$$ if so increase the interest
+- To grow wealth overtime based on balance
 
 ## Assignment Instructions
 
@@ -85,6 +88,7 @@ The ATM Simulator starts by displaying the selection menu.
 The ATM display has a maximum width of 40 characters.
 
 Format:
+
 ```cs
 ****************************************
          PIXELL RIVER FINANCIAL
