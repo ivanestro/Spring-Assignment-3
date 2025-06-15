@@ -5,7 +5,7 @@ The purpose of this program is to create a client service to apply interest base
 
 __author__ = "Ivan Estropigan"
 __version__ = "1.0.0"
-__credits__ = "COMP-1327 Dev Team, w3school, peps.python.org, stackoverflow"
+__credits__ = "COMP-1327 Dev Team, w3school, peps.python.org, stackoverflow, doc.python.org"
 
 # importing python built in pprint
 from pprint import pprint
@@ -82,10 +82,14 @@ with open(file_name, "w", newline='') as update_ivan:
         writer.writerow((Account, Balance))
 
 # Question 5
-
+# read the file
+# csv.dict reading the file row as dictionaries
 with open(file_name, "r")as update_ivan:
     reader = csv.DictReader(update_ivan)
 
+    # prints question 5
+    # loop through each row inside reader
+    # print the row
     print("\nQuestion 5")
     for row in reader:
         print(row)
