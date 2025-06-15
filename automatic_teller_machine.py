@@ -112,7 +112,7 @@ while user_options != 'Q':
             # Pause the script for the specified number of seconds
             sleep(3)
 
-# Clear the program
+# Clear the program inside the infinite loop
 os.system('cls' if os.name == 'nt' else 'clear')
 
 # When Q is pressed then system shuts down
