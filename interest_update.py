@@ -80,3 +80,12 @@ with open(file_name, "w", newline='') as update_ivan:
     # for each pair goes by their own line format.
     for Account, Balance in customers_account.items():
         writer.writerow((Account, Balance))
+
+# Question 5
+
+with open(file_name, "r")as update_ivan:
+    reader = csv.DictReader(update_ivan)
+
+    print("\nQuestion 5")
+    for row in reader:
+        print(row)
