@@ -2,7 +2,7 @@
 
 __author__ = "Ivan Estropigan"
 __version__ = "1.0.0"
-__credits__ = "COMP-1327 Dev Team, w3school, peps.python.org"
+__credits__ = "COMP-1327 Dev Team, w3school, peps.python.org, stackoverflow, doc.python.org"
 
 import random
 import os
@@ -28,7 +28,6 @@ balance = random.uniform(-1000, 10000)
 max_width = "*" * 40 
 text_pixell_river_financial = "PIXELL RIVER FINANCIAL".center(40)
 text_atm_simulator = "ATM Simulator".center(40)
-
 text_invalid = "INVALID SELECTION".center(40)
 
 Returns:
@@ -67,9 +66,11 @@ while user_options != 'Q':
 
 
     # user options regarding the menu options selection
+    # .upper() this is to prevent users from getting errors
     user_options = input("Enter your selection: ").upper()
 
-    # .values is the value inside the key(d,w,q)
+
+    # .values is the menu_option inside the key(d,w,q)
     if user_options not in menu_options.values():
         print(f"{max_width}"
               f"\n{text_invalid}"
@@ -79,7 +80,7 @@ while user_options != 'Q':
         sleep(2)
 
     # when user presses D transaction amount will be added
-
+    # deposit an amount and add to the account
     elif user_options == 'D':
         transaction = float(input("Enter your transaction amount: "))
         balance += transaction
@@ -91,6 +92,7 @@ while user_options != 'Q':
         sleep(3)
 
     # when user presses w check first if user transaction > balance
+    # if transaction is bigger then output insuff funds to the user
     elif user_options == 'W':
         transaction = float(input("Enter your transaction amount: "))
         if transaction > balance:
@@ -100,8 +102,7 @@ while user_options != 'Q':
             # Pause the script for the specified number of seconds
             sleep(3)
 
-        # else balance is sufficient subtract transaction to balance.
-
+        # else transaction is valid then subtract it from bank
         else:
             balance -= transaction
             print(f"\n{max_width}"
@@ -110,6 +111,9 @@ while user_options != 'Q':
             
             # Pause the script for the specified number of seconds
             sleep(3)
+
+# Clear the program
 os.system('cls' if os.name == 'nt' else 'clear')
 
+# When Q is pressed then system shuts down
 print("Program is Shutting down ")
