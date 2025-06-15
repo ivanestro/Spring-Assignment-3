@@ -7,8 +7,12 @@ __author__ = "Ivan Estropigan"
 __version__ = "1.0.0"
 __credits__ = "COMP-1327 Dev Team, w3school, peps.python.org, stackoverflow"
 
-# importing pprint python built in
+# importing python built in pprint
 from pprint import pprint
+
+# importing csv
+import csv
+
 
 # Storing data from account_balances.txt
 customers_account = {}
@@ -56,3 +60,23 @@ print("\nBalance with interest: ")
 
 # pprint the balance + interest
 pprint(customers_account)
+
+# Question 4 Save Updated Account Data
+# assigning a name to new file
+file_name = "updated_balances_IE.csv"
+
+# this is to open the file, write
+# new line is to not leave blank lines
+# temporary name as update_ivan:
+with open(file_name, "w", newline='') as update_ivan:
+    # csv.writer is to create a row in csv file
+    writer = csv.writer(update_ivan)
+    # creating a header for account, balance
+    writer.writerow(["Account", "Balance"])
+    
+    # gathering data within account, balance
+    # get customers_account items the list in dictionary
+    # basically writes its desired location
+    # for each pair goes by their own line format.
+    for Account, Balance in customers_account.items():
+        writer.writerow((Account, Balance))
