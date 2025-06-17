@@ -41,17 +41,25 @@ Returns:
 ****************************************
 """
 
+text_deposit = "Deposit: D".center(40)
+text_withdraw = "Withdraw: W".center(40)
+text_quit = "Quit: Q".center(40)
+
+
+
 # While loop for user option if q is not pressed
 while user_options != 'Q':
-    # Clear the screen
+    # Clear the screen at the start
     os.system('cls' if os.name == 'nt' else 'clear')
-    text_balance = f"Your Current balance is: ${balance:.2f}".center(40)
-    text_deposit = "Deposit: D".center(40)
-    text_withdraw = "Withdraw: W".center(40)
-    text_quit = "Quit: Q".center(40)
 
+    # Update the balance during while loop
+    text_balance = f"Your Current balance is: ${balance:.2f}".center(40)
+
+    # Prints out header
+    # company name
+    # text balance, deposit, withdraw, quit
     print(f"{max_width} \n"
-      f"{text_pixell_river_financial} \n"
+      f"{text_pixell_river_financial}\n"
       f"{text_atm_simulator}\n"
       f"\n{text_balance}"
       f"\n{text_deposit}"
@@ -63,8 +71,6 @@ while user_options != 'Q':
     for the bank such as boarder, balance, deposit, withdraw, quit.
     """
 
-
-
     # user options regarding the menu options selection
     # .upper() this is to prevent users from getting errors
     user_options = input("Enter your selection: ").upper()
@@ -75,7 +81,7 @@ while user_options != 'Q':
         print(f"{max_width}"
               f"\n{text_invalid}"
               f"\n{max_width}")
-        
+              
         # Pause the script for the specified number of seconds
         sleep(2)
 
@@ -111,9 +117,6 @@ while user_options != 'Q':
             
             # Pause the script for the specified number of seconds
             sleep(3)
-
-# Clear the program inside the infinite loop
-os.system('cls' if os.name == 'nt' else 'clear')
 
 # When Q is pressed then system shuts down
 print("Program is Shutting down ")
